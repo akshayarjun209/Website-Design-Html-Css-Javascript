@@ -1,0 +1,25 @@
+
+.container { 
+    width: 1200px; 
+    margin: 0 auto; 
+    padding:  0 15px; 
+    
+}
+
+.flex { 
+    display: flex;
+}
+
+
+.two-column{ 
+    display: grid;
+}
+
+
+@media (min-width: 50em){ 
+    .two-column{ 
+        grid-auto-flow: column;
+        grid-auto-columns: repeat(2, 1fr);
+    }
+}
+
