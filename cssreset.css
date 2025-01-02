@@ -62,3 +62,29 @@ svg {
     scroll-behavior: auto !important;
   }
 }
+
+--------------------------------------------------------------------------------
+// onscroll background color change
+
+    $(window).scroll(function() {
+      
+        changeNavBackgroundColor(); 
+    });
+
+function changeNavBackgroundColor() {
+    var navbar = $('#header');
+    if ($(window).scrollTop() > 50) {
+         navbar.css({
+            'background': 'rgba(0, 0, 0, 1)', 
+             //'padding': '8px 0'
+        });
+        // navbar.css('background', 'rgba(0, 0, 0, 1)'); 
+    } else {
+        // navbar.css('background', 'rgba(0, 0, 0, 0.5)'); 
+         navbar.css({
+            'background': 'rgba(0, 0, 0, 0.5)', 
+             //'padding': '0 0'
+        });
+    }
+}
+
